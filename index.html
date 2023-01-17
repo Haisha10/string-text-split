@@ -2,12 +2,14 @@
 <html>
   <head>
     <title>String Splitter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
     <h1>String Splitter</h1>
     <form>
-      <textarea id="string"></textarea>
+      <textarea id="string" rows="10" cols="50" style="display:inline-block"></textarea>
+      <textarea id="output" rows="10" cols="50" style="display:inline-block" readonly></textarea>
       <br>
       <label>Delimiter:</label>
       <br>
@@ -34,7 +36,5 @@
       <br>
       <button type="button" onclick="splitString()">Split</button>
     </form>
-    <br>
-    <textarea id="output"></textarea>
   </body>
 </html>
