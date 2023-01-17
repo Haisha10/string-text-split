@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Splitter</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>String Splitter</h1>
+    <form>
+      <textarea id="string"></textarea>
+      <br>
+      <label>Delimiter:</label>
+      <br>
+      <input type="radio" id="commaSpace" name="delimiter" value="commaSpace" checked>
+      <label for="commaSpace">Comma and Space</label>
+      <br>
+      <input type="radio" id="comma" name="delimiter" value="comma">
+      <label for="comma">Comma</label>
+      <br>
+      <input type="radio" id="space" name="delimiter" value="space">
+      <label for="space">Space</label>
+      <br>
+      <input type="radio" id="other" name="delimiter" value="other">
+      <label for="other">Other:</label>
+      <input type="text" id="otherDelimiter">
+      <br>
+      <label>Keep delimiter?</label>
+      <br>
+      <input type="radio" id="yes" name="keep" value="yes" checked>
+      <label for="yes">Yes</label>
+      <br>
+      <input type="radio" id="no" name="keep" value="no">
+      <label for="no">No</label>
+      <br>
+      <button type="button" onclick="splitString()">Split</button>
+    </form>
+    <br>
+    <textarea id="output"></textarea>
+  </body>
+</html>
