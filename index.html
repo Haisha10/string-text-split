@@ -2,21 +2,25 @@
 <html>
   <head>
     <title>String Splitter</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link id="theme" rel="stylesheet" type="text/css" href="light.css">
     <script src="script.js"></script>
   </head>
   <body>
-    <h1>String Splitter</h1>
+    <nav>
+      <h1>String Splitter</h1>
+      <div id="theme-switch" onclick="toggleTheme()">
+        <div id="switch-knob"></div>
+      </div>
+      <label for="theme-switch">Dark Theme</label>
+    </nav>
+    
     <form>
       <textarea id="string" rows="10" cols="50" style="display:inline-block"></textarea>
       <textarea id="output" rows="10" cols="50" style="display:inline-block" readonly></textarea>
       <br>
       <label>Delimiter:</label>
       <br>
-      <input type="radio" id="commaSpace" name="delimiter" value="commaSpace" checked>
-      <label for="commaSpace">Comma and Space</label>
-      <br>
-      <input type="radio" id="comma" name="delimiter" value="comma">
+      <input type="radio" id="comma" name="delimiter" value="comma" checked>
       <label for="comma">Comma</label>
       <br>
       <input type="radio" id="space" name="delimiter" value="space">
@@ -28,11 +32,25 @@
       <br>
       <label>Keep delimiter?</label>
       <br>
-      <input type="radio" id="yes" name="keep" value="yes" checked>
-      <label for="yes">Yes</label>
+      <input type="radio" id="delimiterYes" name="keepDelimiter" value="yes" checked>
+      <label for="delimiterYes">Yes</label>
       <br>
-      <input type="radio" id="no" name="keep" value="no">
-      <label for="no">No</label>
+      <input type="radio" id="delimiterNo" name="keepDelimiter" value="no">
+      <label for="delimiterNo">No</label>
+      <br>
+      <label>Trim result?</label>
+      <br>
+      <input type="radio" id="trimYes" name="trim" value="yes" checked>
+      <label for="trimYes">Yes</label>
+      <br>
+      <input type="radio" id="trimLeft" name="trim" value="yes">
+      <label for="trimYes">Left</label>
+      <br>
+      <input type="radio" id="trimRight" name="trim" value="yes">
+      <label for="trimYes">Right</label>
+      <br>
+      <input type="radio" id="trimNo" name="trim" value="no">
+      <label for="trimNo">No</label>
       <br>
       <button type="button" onclick="splitString()">Split</button>
     </form>

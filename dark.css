@@ -1,0 +1,63 @@
+/* Default styles */
+textarea {
+    width: 45%;
+    height: 400px;
+    display: inline-block;
+}
+
+#theme-switch {
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #ccc;
+    position: relative;
+    cursor: pointer;
+}
+  
+#switch-knob {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: 0.2s;
+}
+  
+#theme-switch:active #switch-knob {
+    left: 25px;
+}
+
+body {
+    background-color: #333;
+}
+  
+h1, label, textarea {
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+  
+textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #555;
+    color: #fff;
+}
+  
+button:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+  
+form {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    textarea {
+      width: 100%;
+      height: 200px;
+    }
+}
